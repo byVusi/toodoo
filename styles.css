@@ -142,6 +142,7 @@ form {
 
 form input {
     border: none;
+    border-radius: 0;
     color: inherit;
     background-color: var(--grey-100);
     padding: 1rem;
