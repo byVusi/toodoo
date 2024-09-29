@@ -1,0 +1,313 @@
+/* ================================
+    DEFAULTS
+=================================== */
+:root {
+   font-size: 1rem;
+   line-height: 1.5;
+}
+
+/* ================================
+    GLOBAL STYLES
+=================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+button {
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+}
+
+/* ===========================
+    TYPOGRAPHY
+============================== */
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: clamp(1rem, 2vw, 1.125rem);
+    background-color: var(--grey-200);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+h1 { font-size: clamp(2rem, 5vw + 1rem, 4rem); }
+h2 { font-size: clamp(1.75rem, 4vw + 1rem, 3.5rem); }
+h3 { font-size: clamp(1.5rem, 3vw + 1rem, 3rem); }
+h4 { font-size: clamp(1.25rem, 2vw + 1rem, 2.5rem); }
+h5 { font-size: clamp(1rem, 1.5vw + 1rem, 2rem); }
+h6 { font-size: clamp(0.875rem, 1vw + 1rem, 1.5rem); }
+
+/* ===============================
+    ICON STYLES
+================================== */
+/* The toggle icon */
+nav ul li i:nth-of-type(2) { 
+    font-size: 1.5rem;
+    color: var(--brand-500);
+    cursor: pointer;
+}
+
+/* ===============================
+    LAYOUT
+================================== */
+.wrapper {
+    width: 90%;
+    max-width: 50rem;
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+    box-shadow: 0.0625rem 0.0625rem 2rem var(--grey-300);
+    background-color: var(--grey-100);
+}
+
+nav a svg {
+    width: clamp(1.5rem, 1vw + 1rem, 2.25rem);
+}
+
+nav a:not(nav ul li a) {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: clamp(1.125rem, 2vw, 1.5rem);
+    font-weight: 500;
+}
+
+nav ul li {
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+nav ul li i {
+    flex: 1;
+    align-self: center;
+}
+
+/* ==========================
+    FORMS
+============================= */
+form {
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 5rem 0;
+}
+
+form input {
+    border: none;
+    color: inherit;
+    background-color: var(--grey-100);
+    padding: 1rem;
+    flex: 1;
+}
+
+form button {
+    padding: 0.25rem 1rem;
+    background-color: var(--brand-500);
+    border: none;
+}
+
+/* Error feedback */
+.feedback-message {
+    width: 100%;
+    background-color: var(--danger-100);
+    color: var(--danger-500); 
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-50%) translateY(-0.625rem);
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    padding: 0.625rem;
+    z-index: 1000;
+}
+
+/* =========================
+    LIST ITEMS
+============================ */
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    background-color: var(--grey-100);
+    color: inherit;
+    box-shadow: 0.0625rem 0.0625rem 1rem var(--grey-300);
+}
+
+.list-item-content,
+.list-item-control {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+}
+
+.list-item button {
+    padding: 0.5rem 1rem;
+}
+
+/* Edit button */
+.list-item button:nth-of-type(1) {
+    background-color: var(--info-500);
+    color: var(--info-100);
+}
+
+/* Delete button */
+.list-item button:nth-of-type(2) {
+    background-color: var(--danger-500);
+    color: var(--danger-100);
+}
+
+/* ===============================
+    HOVER AND ACTIVE STYLES
+================================== */
+button:hover {
+    opacity: 0.9;
+}
+
+button:active {
+    opacity: 1;
+}
+
+#list input,
+#list label {
+    cursor: pointer;
+}
+
+/* ===============================
+    FOCUS STYLES
+================================== */
+:focus:not(input, button:not(form button)) {
+    outline: 0.125rem solid var(--brand-300);
+}
+
+form input:focus {
+    outline: none;
+    border-bottom: 0.125rem solid var(--brand-300);
+}
+
+/* ===============================
+    BRAND COLOUR
+================================== */
+#brand-circle,
+#brand-tick {
+    fill: var(--brand-500);
+}
+
+/* ===============================
+    DARK MODE
+================================== */
+.dark-mode {
+    background-color: var(--grey-1000);
+    color: var(--grey-200);
+}
+
+.dark-mode nav {
+    background-color: var(--grey-900);
+    box-shadow: none;
+}
+
+.dark-mode ul li a:hover {
+    color: var(--grey-300);
+}
+
+.dark-mode form input {
+    background-color: var(--grey-900);
+}
+
+/* Error feedback */
+.dark-mode .feedback-message {
+    background-color: var(--danger-200);
+    color: var(--danger-800);
+}
+
+.feedback-message.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dark-mode .list-item {
+    background-color: var(--grey-900);
+    box-shadow: none;
+}
+
+.dark-mode .list-item button:nth-of-type(1) {
+    background-color: var(--info-700);
+    color: var(--info-100);
+}
+
+.dark-mode .list-item button:nth-of-type(2) {
+    background-color: var(--danger-700);
+    color: var(--danger-100);
+}
+
+/* ======================================
+    MEDIA QUERIES
+========================================= */
+/* Extra small devices (phones, less than 35.99rem) */
+@media (max-width: 35.99rem) {}
+
+/* Small devices (tablets, 36rem and up) */
+@media (min-width: 36rem) {}
+
+/* Medium devices (desktops, 48rem and up) */
+@media (min-width: 48rem) {}
+
+/* Large devices (desktops, 62rem and up) */
+@media (min-width: 62rem) {}
+
+/* Extra large devices (large desktops, 75rem and up) */
+@media (min-width: 75rem) {}
+
+/* Extra extra large devices (larger desktops, 87.5rem and up) */
+@media (min-width: 87.5rem) {}

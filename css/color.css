@@ -1,0 +1,114 @@
+/* ==================================
+    ROOT VARIABLES
+===================================== */
+:root {
+    /* ==============================
+        HUES 
+    ================================= */
+    --brand-hue: 22;
+    --success-hue: 127;
+    --danger-hue: 0;
+    --warning-hue: 38;
+    --info-hue: 211;
+
+    /* ==============================
+        SATURATION
+    ================================= */
+    --sat-100: 100%;
+    --sat-200: 86%;
+    --sat-300: 84%;
+    --sat-400: 82%;
+    --sat-500: 80%;
+    --sat-600: 71%;
+    --sat-700: 80%;
+    --sat-800: 90%;
+    --sat-900: 100%;
+
+    /* ==============================
+        LIGHTNESS
+    ================================= */
+    --lig-100: 96%;
+    --lig-200: 85%;
+    --lig-300: 75%;
+    --lig-400: 66%;
+    --lig-500: 56%;
+    --lig-600: 43%;
+    --lig-700: 32%;
+    --lig-800: 21%;
+    --lig-900: 12%;
+
+    /* ==============================
+        BRAND COLORS
+    ================================= */
+    --brand-100: hsl(var(--brand-hue), var(--sat-100), var(--lig-100));
+    --brand-200: hsl(var(--brand-hue), var(--sat-200), var(--lig-200));
+    --brand-300: hsl(var(--brand-hue), var(--sat-300), var(--lig-300));
+    --brand-400: hsl(var(--brand-hue), var(--sat-400), var(--lig-400));
+    --brand-500: hsl(var(--brand-hue), var(--sat-500), var(--lig-500));
+    --brand-600: hsl(var(--brand-hue), var(--sat-600), var(--lig-600));
+    --brand-700: hsl(var(--brand-hue), var(--sat-700), var(--lig-700));
+    --brand-800: hsl(var(--brand-hue), var(--sat-800), var(--lig-800));
+    --brand-900: hsl(var(--brand-hue), var(--sat-900), var(--lig-900));
+    
+    /* ===============================
+        SUPPORTING COLORS
+    ================================== */
+    /* Greens */
+    --success-100: hsl(var(--success-hue), var(--sat-100), var(--lig-100));
+    --success-200: hsl(var(--success-hue), var(--sat-200), var(--lig-200));
+    --success-300: hsl(var(--success-hue), var(--sat-300), var(--lig-300));
+    --success-400: hsl(var(--success-hue), var(--sat-400), var(--lig-400));
+    --success-500: hsl(var(--success-hue), var(--sat-500), var(--lig-500));
+    --success-600: hsl(var(--success-hue), var(--sat-600), var(--lig-600));
+    --success-700: hsl(var(--success-hue), var(--sat-700), var(--lig-700));
+    --success-800: hsl(var(--success-hue), var(--sat-800), var(--lig-800));
+    --success-900: hsl(var(--success-hue), var(--sat-900), var(--lig-900));
+
+    /* Reds */
+    --danger-100: hsl(var(--danger-hue), var(--sat-100), var(--lig-100));
+    --danger-200: hsl(var(--danger-hue), var(--sat-200), var(--lig-200));
+    --danger-300: hsl(var(--danger-hue), var(--sat-300), var(--lig-300));
+    --danger-400: hsl(var(--danger-hue), var(--sat-400), var(--lig-400));
+    --danger-500: hsl(var(--danger-hue), var(--sat-500), var(--lig-500));
+    --danger-600: hsl(var(--danger-hue), var(--sat-600), var(--lig-600));
+    --danger-700: hsl(var(--danger-hue), var(--sat-700), var(--lig-700));
+    --danger-800: hsl(var(--danger-hue), var(--sat-800), var(--lig-800));
+    --danger-900: hsl(var(--danger-hue), var(--sat-900), var(--lig-900));
+
+    /* Oranges */
+    --warning-100: hsl(var(--warning-hue), var(--sat-100), var(--lig-100));
+    --warning-200: hsl(var(--warning-hue), var(--sat-200), var(--lig-200));
+    --warning-300: hsl(var(--warning-hue), var(--sat-300), var(--lig-300));
+    --warning-400: hsl(var(--warning-hue), var(--sat-400), var(--lig-400));
+    --warning-500: hsl(var(--warning-hue), var(--sat-500), var(--lig-500));
+    --warning-600: hsl(var(--warning-hue), var(--sat-600), var(--lig-600));
+    --warning-700: hsl(var(--warning-hue), var(--sat-700), var(--lig-700));
+    --warning-800: hsl(var(--warning-hue), var(--sat-800), var(--lig-800));
+    --warning-900: hsl(var(--warning-hue), var(--sat-900), var(--lig-900));
+    
+    /* Blues */
+    --info-100: hsl(var(--info-hue), var(--sat-100), var(--lig-100));
+    --info-200: hsl(var(--info-hue), var(--sat-200), var(--lig-200));
+    --info-300: hsl(var(--info-hue), var(--sat-300), var(--lig-300));
+    --info-400: hsl(var(--info-hue), var(--sat-400), var(--lig-400));
+    --info-500: hsl(var(--info-hue), var(--sat-500), var(--lig-500));
+    --info-600: hsl(var(--info-hue), var(--sat-600), var(--lig-600));
+    --info-700: hsl(var(--info-hue), var(--sat-700), var(--lig-700));
+    --info-800: hsl(var(--info-hue), var(--sat-800), var(--lig-800));
+    --info-900: hsl(var(--info-hue), var(--sat-900), var(--lig-900));  
+
+    /* =================================
+        GREYSCALE
+    ==================================== */
+    --grey-100: hsl(0, 0%, 100%);
+    --grey-200: hsl(0, 0%, 90%);
+    --grey-300: hsl(0, 0%, 80%);
+    --grey-400: hsl(0, 0%, 70%);
+    --grey-500: hsl(0, 0%, 60%);
+    --grey-600: hsl(0, 0%, 50%);
+    --grey-700: hsl(0, 0%, 40%);
+    --grey-800: hsl(0, 0%, 30%);
+    --grey-900: hsl(0, 0%, 20%);
+    --grey-1000: hsl(0, 0%, 10%);
+    --grey-1100: hsl(0, 0%, 0%);
+}
