@@ -2,7 +2,7 @@
     DEFAULTS
 =================================== */
 :root {
-   font-size: 1rem;
+   font-size: 16px;
    line-height: 1.5;
 }
 
@@ -297,9 +297,6 @@ form input:focus {
 /* ======================================
     MEDIA QUERIES
 ========================================= */
-/* Extra small devices (phones, less than 35.99rem) */
-@media (max-width: 35.99rem) {}
-
 /* Small devices (tablets, 36rem and up) */
 @media (min-width: 36rem) {}
 
