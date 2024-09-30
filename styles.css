@@ -151,10 +151,6 @@ form input {
     flex: 1;
 }
 
-input[placeholder] {
-    font-size: 0.875rem;
-}
-
 form button {
     width: 44px;
     height: 44px;
