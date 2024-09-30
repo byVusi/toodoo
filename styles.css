@@ -56,7 +56,7 @@ button {
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-size: clamp(1rem, 2vw, 1.125rem);
-    background-color: var(--grey-200);
+    background-color: var(--grey-100);
     user-select: none;
     -webkit-user-select: none;
     -webkit-tap-highlight-color: transparent;
@@ -96,7 +96,7 @@ nav ul li i:nth-of-type(2) {
     LAYOUT
 ================================== */
 .wrapper {
-    width: 90%;
+    width: 92.5%;
     max-width: 50rem;
     margin: 0 auto;
 }
@@ -105,7 +105,6 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    box-shadow: 0.0625rem 0.0625rem 2rem var(--grey-300);
     background-color: var(--grey-100);
 }
 
@@ -141,21 +140,26 @@ nav ul li i {
 form {
     display: flex;
     flex-flow: row nowrap;
-    margin: 5rem 0;
+    margin: 2rem 0;
 }
 
 form input {
-    border: none;
     border-radius: 0;
     color: inherit;
-    background-color: var(--grey-100);
-    padding: 1rem;
+    border: 1px solid var(--grey-200);
+    padding: 0.5rem 1rem;
     flex: 1;
 }
 
+input[placeholder] {
+    font-size: 0.875rem;
+}
+
 form button {
-    padding: 0.25rem 1rem;
-    background-color: var(--brand-500);
+    width: 44px;
+    height: 44px;
+    background-color: var(--info-500);
+    color: var(--grey-100);
     border: none;
 }
 
@@ -167,7 +171,7 @@ form button {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translateX(-50%) translateY(-0.625rem);
+    transform: translateY(-0.625rem);
     opacity: 0;
     transition: opacity 0.3s ease, transform 0.3s ease;
     padding: 0.625rem;
@@ -181,17 +185,22 @@ form button {
     display: flex;
     justify-content: space-between;
     gap: 0.5rem;
-    padding: 1rem;
+    padding: 0rem;
     margin-bottom: 0.75rem;
-    background-color: var(--grey-100);
     color: inherit;
-    box-shadow: 0.0625rem 0.0625rem 1rem var(--grey-300);
 }
 
 .list-item-content,
 .list-item-control {
     display: flex;
     align-items: center;
+}
+
+.list-item-control {
+    gap: 0rem;
+}
+
+.list-item-content {
     gap: 0.75rem;
 }
 
@@ -201,30 +210,30 @@ input[type="checkbox"] {
 }
 
 .list-item button {
-    padding: 0.5rem 1rem;
+    width: 44px;
+    height: 44px;
+    background-color: none;
 }
 
 /* Edit button */
 .list-item button:nth-of-type(1) {
-    background-color: var(--info-500);
-    color: var(--info-100);
+    color: var(--info-500);
 }
 
 /* Delete button */
 .list-item button:nth-of-type(2) {
-    background-color: var(--danger-500);
-    color: var(--danger-100);
+    color: var(--danger-500);
 }
 
 /* ===============================
     HOVER AND ACTIVE STYLES
 ================================== */
-button:hover {
-    opacity: 0.9;
+form button:hover {
+    background-color: var(--info-600);
 }
 
-button:active {
-    opacity: 1;
+form button:active {
+    background-color: var(--info-700);
 }
 
 #list input,
@@ -235,13 +244,10 @@ button:active {
 /* ===============================
     FOCUS STYLES
 ================================== */
-:focus:not(input, button:not(form button)) {
-    outline: 0.125rem solid var(--brand-300);
-}
-
 form input:focus {
     outline: none;
-    border-bottom: 0.125rem solid var(--brand-300);
+    border: none;
+    border-bottom: 0.0625rem solid var(--grey-300);
 }
 
 /* ===============================
@@ -271,6 +277,11 @@ form input:focus {
 
 .dark-mode form input {
     background-color: var(--grey-900);
+    border: none;
+}
+
+.dark-mode form input:focus {
+    border-bottom: 0.0625rem solid var(--grey-500); 
 }
 
 /* Error feedback */
@@ -284,19 +295,12 @@ form input:focus {
     transform: translateY(0);
 }
 
-.dark-mode .list-item {
-    background-color: var(--grey-900);
-    box-shadow: none;
-}
-
 .dark-mode .list-item button:nth-of-type(1) {
-    background-color: var(--info-700);
-    color: var(--info-100);
+    color: var(--info-500);
 }
 
 .dark-mode .list-item button:nth-of-type(2) {
-    background-color: var(--danger-700);
-    color: var(--danger-100);
+    color: var(--danger-500);
 }
 
 /* ======================================
