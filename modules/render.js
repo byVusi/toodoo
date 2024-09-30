@@ -90,7 +90,7 @@ export function buildListItem(item, index) {
 	if (item.complete) {
 		label.style.color = "var(--grey-600)";
 		label.style.textDecoration = "line-through";
-		label.parentNode.parentNode.style.opacity = "0.4";
+		label.parentNode.parentNode.style.opacity = "0.5";
 		checkbox.checked = true;
 		editBtn.style.visibility = "hidden";
 	} else {
