@@ -105,7 +105,6 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 1rem 1.5rem;
-    background-color: var(--grey-100);
 }
 
 nav a svg {
@@ -260,11 +259,6 @@ form input:focus {
 .dark-mode {
     background-color: var(--grey-1000);
     color: var(--grey-200);
-}
-
-.dark-mode nav {
-    background-color: var(--grey-900);
-    box-shadow: none;
 }
 
 .dark-mode ul li a:hover {
