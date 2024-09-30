@@ -23,7 +23,7 @@ export function handleCheckboxClick() {
 				? "hidden"
 				: "visible";
 
-			checkbox.closest(".list-item").style.opacity = isChecked ? "0.4" : "1";
+			checkbox.closest(".list-item").style.opacity = isChecked ? "0.5" : "1";
 
 			currentItem.remove();
 			isChecked ? myList.appendChild(currentItem) : myList.prepend(currentItem);
@@ -100,10 +100,12 @@ export function handleEditButtonClick() {
 				"width:100%; outline: none; border-bottom: 2px solid var(--brand-400);";
 			text.focus();
 
-			const button = clickedButton.parentNode;
-			clickedButton.style.color = "var(--success-100);";
-			button.style.backgroundColor = "var(--success-700)";
+			const theme = retrieveStoredData("TooDoo-theme");
 
+			clickedButton.style.color = document.body.classList.contains("dark-mode")
+				? "var(--success-600)"
+				: "var(--success-500)";
+			const button = clickedButton.parentNode;
 			button.nextElementSibling.style.visibility = "hidden";
 
 			clickedButton.classList.remove("fa-pencil");
@@ -149,8 +151,7 @@ export function handleCheckButtonClick(oldText) {
 			text.style = "width:revert; outline: revert; border-bottom: revert";
 
 			const button = clickedButton.parentNode;
-			clickedButton.style.color = "var(--info-100)";
-			button.style.backgroundColor = "var(--info-700)";
+			clickedButton.style.color = "var(--info-500)";
 
 			button.nextElementSibling.style.visibility = "visible";
 
